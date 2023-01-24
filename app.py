@@ -1,9 +1,8 @@
-import flask
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-myList = [[1, "My Title", "This is a blog post"], [2, "My Title 2", "This is a blog post 2"]]
+myList = [[1, "Welcome", "Welcome to my website! This is currently a test blog post, so check back later to see more :)"], [2, "You have found me", "go away"]]
 
 @app.route('/')
 def index():
@@ -22,7 +21,7 @@ def projects():
 
 @app.route('/post/<post>')
 def post(post):
-    if myList.__len__() >= int(post):
+    if myList.__len__() > int(post):
         title = myList[int(post)][1];
         content = myList[int(post)][2];
         return render_template('post.html', title=title, content=content)
