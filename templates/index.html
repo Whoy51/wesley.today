@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <title>Wesley Hoy</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Make a navbar that contains "Home", "About Me" and "Contact"-->
     <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('about') }}">About Me</a></li>
-        <li style="float:right"><a href="mailto:admin@wesley.today">Contact</a></li>
+        <li><a id = "selected" href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li style="float:right;"><a id = "right" href="mailto:admin@wesley.today">Contact</a></li>
     </ul>
+    <div class="container">
+        <h1>👋 Hello</h1>
+        <p>Hi, I'm Wesley!</p>
+
+    </div>
 
 </body>
 </html>
