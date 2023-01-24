@@ -23,7 +23,7 @@ html {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 10% 0px;
+    padding: 10% 10px;
     text-align: center;
     font-size: 200%;
     max-width: 1200px;
@@ -40,6 +40,7 @@ ul {
 
 }
 
+
 li {
     float: left;
 }
@@ -52,14 +53,13 @@ li a {
     margin: 3px;
     padding: 14px 16px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 li a:hover {
     background-color: #e1dfdf;
     color: black;
 }
-
 #right {
     background-color: #c35cf6;
     color: white;
@@ -68,7 +68,15 @@ li a:hover {
     background-color: #d7b5e8;
     color: #5d5454;
 }
+ul:hover li a {
+    color: #5d5a5a;
+}
+
 #selected {
     background-color: #e2d1ec;
     color: black;
+}
+hr.rounded {
+    border: 2px solid #e0dede;
+    border-radius: 5px;
 }
