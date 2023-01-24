@@ -2,23 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>About</title>
+    {% if title %}
+    <title>Post: {{ title }}</title>
+    {%  else %}
+    <title>Unknown Post</title>
+    {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='posts.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&amp;display=swap" rel="stylesheet">
+
 </head>
 <body>
     <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a id = "selected" href="{{ url_for('about') }}">About</a></li>
+        <li><a id href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
         <li><a href="{{ url_for('projects') }}">Projects</a></li>
         <li style="float:right;"><a id = "right" href="mailto:admin@wesley.today">Contact</a></li>
     </ul>
-    <div class="container">
-        <h1>About</h1>
-        <p>I'm a software developer based in Washington, D.C.</p>
-
+    <div id = "post">
+        {% if content %}
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
+        {%  else %}
+        <h1>Unknown Post</h1>
+        {% endif %}
     </div>
 
 </body>

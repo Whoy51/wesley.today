@@ -28,6 +28,9 @@ html {
     font-size: 200%;
     max-width: 1200px;
 }
+.container p {
+    font-size: 100%;
+}
 ul {
     list-style-type: none;
     margin: 0;
