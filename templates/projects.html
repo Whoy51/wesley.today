@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
+    <ul>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a id = "selected" href="{{ url_for('projects') }}">Projects</a></li>
+        <li style="float:right;"><a id = "right" href="mailto:admin@wesley.today">Contact</a></li>
+    </ul>
+    <div class="container">
+        <h1>Projects</h1>
+        <p>Check out my <a href="https://github.com/Whoy51">GitHub</a> to see my projects</p>
+
+    </div>
 
 </body>
 </html>
