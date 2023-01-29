@@ -2,7 +2,10 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-myList = [[1, "Welcome", "Welcome to my website! This is currently a test blog post, so check back later to see more :)"], [2, "You have found me", "go away"]]
+myList = [
+    [1, "Welcome", "Welcome to my website! This is currently a test blog post, so check back later to see more :)"],
+    [2, "You have found me", "go away"]]
+
 
 @app.route('/')
 def index():
