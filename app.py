@@ -7,7 +7,6 @@ app = Flask(__name__)
 Markdown(app)
 
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -25,7 +24,6 @@ def projects():
 
 @app.route('/post/<post>')
 def post(post):
-    print(post)
     if Path("./static/markdown/" + post + ".md").is_file():
         file = open('./static/markdown/' + post + ".md", 'r')
         string = markdown.markdown(
@@ -34,6 +32,7 @@ def post(post):
         return render_template('post.html', title=post, content=string)
     else:
         return render_template('post.html')
+
 
 if __name__ == '__main__':
     app.run()
