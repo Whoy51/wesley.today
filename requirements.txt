@@ -1,2 +1,3 @@
 Flask~=2.2.2
 GUnicorn~=20.1.0
+Markdown~=3.4.1

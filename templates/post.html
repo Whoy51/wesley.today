@@ -25,8 +25,7 @@
     <hr class = "rounded">
     <div id = "post">
         {% if content %}
-        <h1>{{ title }}</h1>
-        <p>{{ content }}</p>
+        <p>{{ content|markdown }}</p>
         {%  else %}
         <h1>Unknown Post</h1>
         {% endif %}
