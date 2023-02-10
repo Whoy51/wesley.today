@@ -47,7 +47,7 @@ def post(post):
         string += markdown.markdown(
             file.read(), extensions=["fenced_code"]
         )
-        return render_template('post.html', title=project, content=string)
+        return render_template('post.html', title=post, content=string)
     else:
         return redirect(url_for('index'))
 
