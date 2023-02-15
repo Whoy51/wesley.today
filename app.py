@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, send_file
 from flaskext.markdown import Markdown
 import markdown.extensions.fenced_code
 from pathlib import Path
@@ -20,6 +20,7 @@ def about():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
 
 @app.route('/posts')
 def posts():
@@ -49,6 +50,16 @@ def post(post):
         )
         return render_template('post.html', title=post, content=string)
     else:
+        return redirect(url_for('index'))
+
+
+@app.route('/file/<file>')
+def downloadFile(file):
+    if Path("./static/uploads/" + file).is_file():
+        path = "./static/uploads/" + file
+        return send_file(path, as_attachment=True)
+    else:
+        # TODO: Add a 404 page
         return redirect(url_for('index'))
 
 
