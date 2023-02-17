@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home | Wesley Hoy</title>
+    <meta name="description" content="Welcome to the official page for Wesley Hoy"/>
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +16,14 @@
         <li><a href="{{ url_for('about') }}">About</a></li>
         <li><a href="{{ url_for('projects') }}">Projects</a></li>
         <li style="float:right;"><a id = "right" href="mailto:hoywesley@gmail.com">Contact</a></li>
+        <script src = "{{ url_for('static', filename = 'app.js') }}"></script>
     </ul>
     <hr class = "rounded">
 
     <div class="container">
-        <h2>👋 hi, i'm wesley!</h1>
+        <h3>👋 Hello, I'm Wesley!</h3>
 
-        <p>this website is still under construction; many parts are still incomplete. feel free to take a look around, but if you have any questions, please <a href="mailto:hoywesley@gmail.com">contact</a> me!</p>
+        <p>This website is still under construction; many parts are still incomplete. Feel free to take a look around, but if you have any questions, please <a href="mailto:hoywesley@gmail.com">contact</a> me!</p>
 
     </div>
 
